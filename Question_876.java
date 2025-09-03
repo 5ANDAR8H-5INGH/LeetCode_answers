@@ -1,24 +1,24 @@
+/**
+ * Definition for singly-linked list.
+ * public class ListNode {
+ *     int val;
+ *     ListNode next;
+ *     ListNode() {}
+ *     ListNode(int val) { this.val = val; }
+ *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
+ * }
+ */
 class Solution {
-    public boolean isHappy(int n) {
-        // Floyd’s cycle detection
-        int slow = n;
-        int fast = n;
-        do{
-            slow = findsqr(slow);
-            fast = findsqr(findsqr(fast));
-        }while(slow!=fast);
-        if(slow==1){
-            return true;
+    public ListNode middleNode(ListNode head) {
+        ListNode fast = head;
+        ListNode slow = head;
+        while(fast.next!=null ){
+            slow = slow.next;
+            fast = fast.next;
+            if(fast.next!=null){
+                fast = fast.next;
+            }
         }
-        return false;
-    }
-    public int findsqr(int n){
-        int ans = 0;
-        while(n>0){
-            int rem = n%10;
-            ans+=rem*rem;
-            n/=10;
-        }
-        return ans;
+        return slow;
     }
 }
