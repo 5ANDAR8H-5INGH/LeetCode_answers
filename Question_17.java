@@ -37,6 +37,6 @@ class Solution {
                 List.addAll(helper(p+ch,digits.substring(1)));
             }
         }
-        return List;
+        return List; // returning merged
     }
 }
