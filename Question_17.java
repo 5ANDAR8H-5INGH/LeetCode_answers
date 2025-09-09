@@ -3,7 +3,7 @@ class Solution {
         if(digits.isEmpty()){
             return new ArrayList<>();
         }
-        return helper("",digits);
+        return helper("",digits); // using helper function
     }
     public List<String> helper(String p,String digits){
         if(digits.isEmpty()){
