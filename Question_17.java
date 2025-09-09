@@ -11,7 +11,7 @@ class Solution {
             List.add(p);
             return List;
         }
-        int digit = digits.charAt(0) - '0';
+        int digit = digits.charAt(0) - '0'; // First character
         ArrayList<String> List = new ArrayList<>();
         if(digit<7){
             for(int i = (digit-2)*3;i<((digit-1)*3);i++){
