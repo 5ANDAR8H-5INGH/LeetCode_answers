@@ -14,7 +14,7 @@ class Solution {
     }
     
     public int digit(int n){
-        int length=0;
+        int length=0; // finding no. of digits
         while(n>0){
             length++;
             n=n/10;

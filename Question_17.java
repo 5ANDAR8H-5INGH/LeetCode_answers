@@ -3,7 +3,7 @@ class Solution {
         if(digits.isEmpty()){
             return new ArrayList<>();
         }
-        return helper("",digits);
+        return helper("",digits); // using helper function
     }
     public List<String> helper(String p,String digits){
         if(digits.isEmpty()){
@@ -11,7 +11,7 @@ class Solution {
             List.add(p);
             return List;
         }
-        int digit = digits.charAt(0) - '0';
+        int digit = digits.charAt(0) - '0'; // First character
         ArrayList<String> List = new ArrayList<>();
         if(digit<7){
             for(int i = (digit-2)*3;i<((digit-1)*3);i++){
@@ -19,6 +19,7 @@ class Solution {
                 List.addAll(helper(p+ch,digits.substring(1)));
             }
         }
+            // seprate case for last
         else if(digit == 7){
             for(int i = 15; i < 19; i++){
                 char ch = (char)('a' + i);
@@ -37,6 +38,6 @@ class Solution {
                 List.addAll(helper(p+ch,digits.substring(1)));
             }
         }
-        return List;
+        return List; // returning merged list
     }
 }
