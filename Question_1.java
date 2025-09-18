@@ -7,7 +7,7 @@ class Solution {
                     return new int[]{i, j};
                 }
         } 
-        }uritytyt
+        }
         return new int[]{};
     }
 }
