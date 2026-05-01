@@ -1,5 +1,5 @@
 This repo will contain leetcode solutions
 
-PS : The codes may not not be optimized its just normal...
+PS : The codes may not not be optimized...
 
 
